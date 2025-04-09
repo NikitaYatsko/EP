@@ -38,3 +38,11 @@ function mergeObjects(firstObj, secondObj) {
 }
 
 console.log(mergeObjects({a: 1, b: 2}, {b: 3, c: 4}));
+
+//task 7
+const appendButton = document.getElementById('addButton');
+const list = document.getElementById('myList');
+
+appendButton.addEventListener('click', () => {
+    list.innerHTML += `<li>New Item</li>`;
+});
