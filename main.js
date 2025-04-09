@@ -1,9 +1,13 @@
+//task 1
 function celsiusToFahrenheit(celsius) {
     return (celsius * 9 / 5) + 32;
 }
 
 console.log(celsiusToFahrenheit(0));
 console.log(celsiusToFahrenheit(25));
+
+
+//task 2
 
 function isPrime(n) {
     if (n <= 1) return false;
@@ -21,7 +25,7 @@ console.log(isPrime(7));
 console.log(isPrime(10));
 console.log(isPrime(2));
 
-
+//task 3
 const myArray = [1, 2, 3, 4];
 
 /*const myArray = ["a","b","c"];*/
@@ -32,6 +36,8 @@ function reverseArray(arrayToReverse) {
 
 console.log(reverseArray(myArray));
 
+
+//task 4
 function mergeObjects(firstObj, secondObj) {
     return {...firstObj, ...secondObj}
 }
@@ -64,3 +70,23 @@ function countOccurrences(arr, value) {
 
 console.log(countOccurrences([1, 2, 2, 3, 2, 4], 2))
 console.log(countOccurrences(['a', 'b', 'a', 'c'], 'a'));
+
+//task 8
+function startLoading() {
+    const progressBar = document.getElementById('progressBar');
+    const statusText = document.getElementById('statusText');
+    let progress = 0;
+
+    const interval = setInterval(() => {
+        if (progress >= 100) {
+            alert('done');
+            clearInterval(interval);
+        } else {
+            progress += 1;
+            progressBar.style.width = progress + '%';
+            statusText.textContent = `Progress: ${progress}%`;
+        }
+    }, 50);
+}
+
+document.getElementById('startButton').addEventListener('click', startLoading);
