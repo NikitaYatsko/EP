@@ -33,3 +33,8 @@ function reverseArray(arrayToReverse) {
 
 console.log(reverseArray(myArray));
 
+function mergeObjects(firstObj, secondObj) {
+    return {...firstObj, ...secondObj}
+}
+
+console.log(mergeObjects({a: 1, b: 2}, {b: 3, c: 4}));
