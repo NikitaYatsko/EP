@@ -1,6 +1,5 @@
 function celsiusToFahrenheit(celsius) {
-    const fahrenheit = (celsius * 9 / 5) + 32;
-    return fahrenheit;
+    return (celsius * 9 / 5) + 32;
 }
 
 console.log(celsiusToFahrenheit(0));
@@ -55,3 +54,13 @@ function objectToArray(obj) {
 
 console.log(objectToArray({name: 'Alice', age: 25}));
 console.log(objectToArray({city: 'New York', country: 'USA'}));
+
+
+//task 4
+
+function countOccurrences(arr, value) {
+    return arr.filter(item => item === value).length;
+}
+
+console.log(countOccurrences([1, 2, 2, 3, 2, 4], 2))
+console.log(countOccurrences(['a', 'b', 'a', 'c'], 'a'));
